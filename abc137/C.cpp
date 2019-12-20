@@ -4,19 +4,19 @@ using namespace std;
 int main() {
   int N;
   cin >> N;
-  vector<string> s(N);
+  map<string, long long int> anagramCounter;
+
   for(int i=0;i<N;i++) {
-    string str;
-    cin >> str;
-    sort(str.begin(), str.end());
-    s[i] = str;
+    string s;
+    cin >> s;
+    sort(s.begin(), s.end());
+    anagramCounter[s]++;
+  }
+  long long int total = 0;
+  for(auto i=anagramCounter.begin();i!=anagramCounter.end();i++) {
+    total += i->second * (i->second-1) / 2; 
   }
 
-  sort(s.begin(), s.end());
-
-  int total = 1;
-  long long int ans = 0;
-
-
+  cout << total << endl;
   return 0;
 }
