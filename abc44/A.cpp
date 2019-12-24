@@ -7,6 +7,6 @@ int main() {
   if(n>k) {
     cout << x * k + y * (n - k) << endl;
   } else {
-    cout << x * k << endl;
+    cout << x * n << endl;
   }
 }
