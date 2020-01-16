@@ -17,9 +17,6 @@ int main() {
     }
   }
 
-  cout << start << endl;
-  cout << end << endl;
-
 
   if(end - start == 7) {
     if(5-start<0) cout << doremi[17 - start] << endl;

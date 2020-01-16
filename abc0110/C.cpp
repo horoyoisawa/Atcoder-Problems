@@ -6,7 +6,20 @@ int main() {
   string t;
 
   cin >> s >> t;
+  vector<int> a(26);
+  vector<int> b(26);
 
-  map<char, int> a;
-  map<char, int> b;
+  for(int i=0;i<s.size();i++) {
+    int c = s[i] - 'a';
+    int d = t[i] - 'a';
+
+    a[c]++;
+    b[d]++;
+  }
+
+  sort(a.begin(), a.end());
+  sort(b.begin(), b.end());
+
+  if(a == b) cout << "Yes" << endl;
+  else cout << "No" << endl;
 }
